@@ -40,7 +40,7 @@ possible_values = [n_gen for n_gen in range(1, global_batch_size + 1) if (global
 
 Or you can choose to simply replace the original `/path/to/env/trl/trainer/grpo_trainer.py` with what we offered in this repo.
 
-**Third, very important**, please replace the original `/path/to/env/trl/trainer/utils.py` with what we offered in this repo. This aligns the teacher-prompt-output via rewriting the function `print_prompt_completions_sample`.
+**Third, very important**, please replace the original `/path/to/env/trl/trainer/utils.py` with what we offered in this repo. This aligns the teacher-prompt-output via rewriting the function `print_prompt_completions_sample`. Alternatively, you can copy and paste from Line 1694-1757.
 
 Finally, we give the real environment configuration we used for all experiments in `used-env.txt`, for debugging convenience. This configuration works like an alarm for Python 3.10 and CUDA 12.9, with A100 / H100 / B200 GPUs.
 
