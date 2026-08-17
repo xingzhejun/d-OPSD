@@ -10,6 +10,7 @@
 
 **Updates:**
 
+* 17-08-2026: **Very important**, fix the trl bug and the warning format bug.
 * 17-06-2026: We released [our paper](https://arxiv.org/abs/2606.18195)
 * 15-06-2026: We released d-OPSD code.
 <!-- * 04-11-2025: We released [our paper](https://dllm-reasoning.github.io/media/preprint.pdf) and [project page](https://dllm-reasoning.github.io). Additionally, the SFT code was open-sourced. -->
@@ -38,6 +39,8 @@ possible_values = [n_gen for n_gen in range(1, global_batch_size + 1) if (global
 ```
 
 Or you can choose to simply replace the original `/path/to/env/trl/trainer/grpo_trainer.py` with what we offered in this repo.
+
+**Third, very important**, please replace the original `/path/to/env/trl/trainer/utils.py` with what we offered in this repo. This aligns the teacher-prompt-output via rewriting the function `print_prompt_completions_sample`.
 
 Finally, we give the real environment configuration we used for all experiments in `used-env.txt`, for debugging convenience. This configuration works like an alarm for Python 3.10 and CUDA 12.9, with A100 / H100 / B200 GPUs.
 
